@@ -149,5 +149,5 @@ $RECYCLE.BIN/
 # nodejs
 node_modules
 pnpm-lock.yaml
-*.js
-*.d.ts
+package-lock.json
+lib
