@@ -1,3 +1,3 @@
-# CodeJS
+# fat_lib
 
-Javascript & Typescript 代码片段
+自用的工具库
