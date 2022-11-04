@@ -3,7 +3,7 @@
 .DS_Store
 .AppleDouble
 .LSOverride
-
+.idea
 # Icon must end with two \r
 Icon
 
@@ -149,5 +149,7 @@ $RECYCLE.BIN/
 # nodejs
 node_modules
 pnpm-lock.yaml
-*.js
-*.d.ts
+package-lock.json
+
+ts
+tsconfig.json
