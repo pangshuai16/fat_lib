@@ -1,0 +1,9 @@
+{
+	"scripts": {
+		"build": "tsc -p tsconfig.json"
+	},
+	"devDependencies": {
+		"@types/axios": "^0.14.0",
+		"@types/node": "^18.11.9"
+	}
+}
