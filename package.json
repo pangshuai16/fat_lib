@@ -3,7 +3,9 @@
   "version": "1.0.4",
   "description": "some function",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patch": "tsc && npm version patch && npm publish",
+    "update": "tsc && npm version minor && npm publish"
   },
   "keywords": [
     "util",

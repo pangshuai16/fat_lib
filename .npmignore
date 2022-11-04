@@ -153,3 +153,4 @@ package-lock.json
 
 src
 tsconfig.json
+.gitignore
