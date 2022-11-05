@@ -12,5 +12,9 @@
     "lib"
   ],
   "author": "fat_handsome",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "packageManager": "yarn@3.2.4"
 }
