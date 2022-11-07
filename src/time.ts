@@ -35,40 +35,23 @@ export const formatDate = (
 /**
  * 判断指定日期是否为工作日
  * @param {string | Date} date 需查询的日期，默认为当日
- * @param {boolean} officialHoliday 是否将节假日判断为休息日,默认：true
- * @param {boolean} daysOff 是否将调休判定为工作日，默认：false
+ * @param {Array} officialHoliday 法定节假日
+ * @param {Array} dayOff 调休日
  */
 export function isWorkday(
     date: string | Date = new Date(),
-    officialHoliday: boolean = true,
-    daysOff: boolean = false
+    officialHoliday: Array<string|Date>= [],
+    dayOff: Array<string|Date>= []
 ) {
-    const holidays = [
-        "2022/9/10", //中秋
-        "2022/9/11", //中秋
-        "2022/9/12", //中秋
-        "2022/10/1", //国庆
-        "2022/10/2", //国庆
-        "2022/10/3", //国庆
-        "2022/10/4", //国庆
-        "2022/10/5", //国庆
-        "2022/10/6", //国庆
-        "2022/10/7", //国庆
-    ];
-    const dayOff = [
-        "2022/10/8", // 国庆调休
-        "2022/10/9", // 国庆调休
-    ];
-
     const target = new Date(date);
-    const day = target.getDay(); // 星期几 0-6
+    const day = target.getDay();
     const dateString = target.toLocaleDateString();
-    const isHoliday = holidays.includes(dateString);
+    const isHoliday = officialHoliday.includes(dateString);
     const isDayOff = dayOff.includes(dateString);
 
-    if (officialHoliday && isHoliday) {
+    if (officialHoliday.length>0 && isHoliday) {
         return false;  // 法定节假日
-    } else if (daysOff && isDayOff) {
+    } else if (dayOff.length>0 && isDayOff) {
         return true;  // 节假日调休
     } else return !(day === 0 || day === 6); // 工作日
 }

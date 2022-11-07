@@ -1,6 +1,4 @@
-// @ts-ignore
 import axios from "axios";
-// @ts-ignore
 import axiosRetry from "axios-retry";
 
 const request = axios.create({

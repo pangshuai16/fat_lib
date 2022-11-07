@@ -54,6 +54,7 @@ export function leftJoin(config: {
 
 /**
  * @desc 两数组内连接
+ * @param config
  */
 export function innerJoin(config: {
     leftArray: Object[],
