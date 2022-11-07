@@ -11,7 +11,7 @@
  * @param {Function} params.start 触摸开始的回调函数
  * @returns {Object} Object:{ remove }
  */
-export function useTouchEvent(params: {
+export default function useTouchEvent(params: {
     el?: HTMLElement,
     left?: Function,
     right?: Function,
