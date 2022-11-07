@@ -1,6 +1,6 @@
 {
   "name": "fat-lib",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "some function",
   "scripts": {
     "build": "rm -rf ./lib && tsc",
